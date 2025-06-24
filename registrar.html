@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrar</title>
+        <link rel="stylesheet" href="css/registrar.css">
+    </head>
+    <body>    
+        <header>
+            <div >
+                <strong>Repuestos Carmona</strong>     
+            </div>
+        </header>
+        <div class="form-container">
+            <h2>Registrar usuario:</h2>
+            <form action="registrar.php" method="POST">
+                
+                <label for="nombre">Nombre:</label>
+                <div style="height: 8px;"></div>
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+                
+                <label for="primer_apellido">Primer apellido:</label>
+                <div style="height: 8px;"></div>
+                <input id="primer_apellido" type="text" name="primer_apellido" placeholder="apellido" required>
+               
+                <label for="segundo_apellido">Segundo apellido:</label>
+                <div style="height: 8px;"></div>
+                <input id="segundo_apellido" type="text" name="segundo_apellido" placeholder="apellido" required>
+                
+                <label for="dni">Dni:</label>
+                <div style="height: 8px;"></div>
+                <input id="dni" type="text" name="dni" placeholder="Dni" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <div style="height: 8px;"></div>
+                <input id="telefono" type="tel" name="telefono" placeholder="Teléfono" required>
+
+                <label for="email">Correo electrónico:</label>
+                <div style="height: 8px;"></div>
+                <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
+                
+                <label for="direccion">Dirección:</label>
+                <div style="height: 8px;"></div>
+                <input id="direccion" type="text" name="direccion" placeholder="Dirección" required>
+                
+                <label for="CPostal">Código postal:</label>
+                <div style="height: 8px;"></div>
+                <input id="CPostal" type="number" name="CPostal" placeholder="Código postal" required>
+
+                <label for="n_tarjeta">Nº de tarjeta:</label>
+                <div style="height: 8px;"></div>
+                <input id="n_tarjeta" type="number" name="n_tarjeta" placeholder="número de la tarjesta" required>
+
+                <label for="n_seguridad">Número de seguridad:</label>
+                <div style="height: 8px;"></div>
+                <input id="n_seguridad" type="number" name="n_seguridad" placeholder="Número de seguridad" required>
+
+                <label for="fecha_cadu">fecha de caducidad:</label>
+                <div style="height: 8px;"></div>
+                <input id="fecha_cadu" type="date" name="fecha_cadu" placeholder="fecha" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <div style="height: 8px;"></div>
+                <div class="password-wrapper">
+                    <input id="contrasena" type="password" name="contrasena" placeholder="Contraseña" required>
+                    <span class="toggle-password" onclick="togglePassword()">👁️</span>
+                </div>
+                <button type="submit" name="registrar"  value="Registrar">Registrar</button>
+            </form>
+        </div>
+        <script>
+            function togglePassword() {
+                const passwordInput = document.getElementById("contrasena");
+                passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+            }
+        </script>   
+    </body>
+</html>
