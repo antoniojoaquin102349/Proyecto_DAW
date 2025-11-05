@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesion</title>
+
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #ffffff; }
+        .navbar { background-color: #007bff; padding: 10px; color: white; display: flex; gap: 20px; }
+        .navbar a { color: white; text-decoration: none; font-size: 16px; margin-right: 300px; }
+        .form-container { background-color: #ffffff; padding: 20px; border-radius: 10px; width: 500px; margin: 50px 0px 50px 20px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 10px; margin-bottom: 10px; width: 470px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        header {
+            background-color: #f0f0f0;
+            color: #000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>  
+    <header>
+        <div >
+            <strong>Repuestos Carmona</strong>     
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h2>Iniciar sesión:</h2>
+        <form action="iniciar_sesion.php" method="POST">
+            <label for="email">email:</label>
+            <div style="height: 8px;"></div>
+            <input id="email" type="email" name="email" placeholder="email" required>
+            <label for="contrasena">Contraseña:</label>
+            <div style="height: 8px;"></div>
+            <input id="contrasena" type="password" name="contrasena" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>        
+</body>
+</html>
